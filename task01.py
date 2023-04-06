@@ -14,8 +14,8 @@ def calculator(expression):
   stack = []
   for e in expression:
     if e in operators:
-      second_operand = float(stack.pop())
       first_operand = float(stack.pop())
+      second_operand = float(stack.pop())
       result = calc(e, first_operand, second_operand)
       stack.append(result)
     else:
